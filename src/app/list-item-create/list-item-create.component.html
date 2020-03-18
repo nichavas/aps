@@ -1,0 +1,25 @@
+<div class="container">
+
+	<div class="center-block mt-40">
+		<mat-radio-group aria-label="Select an option" (input)="typeOfData=$event.target.value">
+			<mat-radio-button value="tvseries" class="mr-40">Dizi</mat-radio-button>
+			<mat-radio-button value="movie">Film</mat-radio-button>
+		</mat-radio-group>
+
+		<form class="example-form" style="display:inline-block;">
+			<mat-form-field class="example-full-width">
+				<mat-label>Film / Dizi adı</mat-label>
+				<input matInput placeholder="Film / Dizi adı" (input)="name = $event.target.value">
+			</mat-form-field>
+		</form>
+		
+		<form class="example-form" style="display:inline-block;">
+			<mat-form-field class="example-full-width">
+				<mat-label>Puan</mat-label>
+				<input matInput placeholder="Puan"  (input)="rank = $event.target.value">
+			</mat-form-field>
+		</form>
+
+		<button  mat-raised-button color="primary" (click)="sendForm()" >KAYDET</button>
+	</div>
+</div>
